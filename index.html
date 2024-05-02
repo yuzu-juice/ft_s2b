@@ -1,42 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Component</title>
-    <style>
-        /* Styles here should be added based on Chakra UI styles or custom styles */
-        /* Styles for '.font-crimson-text' class should be defined */
-    </style>
+    <title>株式会社ft_s2b</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    });
+</script>
 
 <body>
-    <div style="width: 100%; background-color: #e8e9eb;">
-        <header style="background-color: #335c67; padding: 16px; color: white;">
-            <h1 class="font-crimson-text">株式会社ft_s2b</h1>
-        </header>
-        <div style="padding: 20px;">
-            <div style="padding: 16px; background-color: #f4f4f4;">
-                <h2 class="font-crimson-text" style="margin-bottom: 16px;">事業内容</h2>
-                <p class="font-crimson-text" style="font-size: 1rem;">SDGsをサービス化して販売するB2Bビジネス</p>
+    <header class="header">
+        <h1 class="header-title">株式会社ft_s2b</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#intro">Home</a></li>
+                <li class="nav-item"><a href="#services">Services</a></li>
+                <li class="nav-item"><a href="#news">News</a></li>
+                <li class="nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section intro" id="intro">
+            <div class="container">
+                <h2 class="section-title">Sustainable Development Goals</h2>
+                <p class="section-text">持続可能な開発目標（SDGs）をビジネスに統合し、社会と環境にポジティブな影響を与えるための取り組みを推進しています。</p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 20px;">
-                <div style="padding: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); background-color: white;">
-                    <h2 class="font-crimson-text" style="margin-bottom: 16px;">About Us</h2>
-                    <p style="font-size: 0.875rem;">私たちはSDGsのコミットメントを通じて価値を提供します。</p>
+        </section>
+        <section class="section services" id="services">
+            <div class="container grid">
+                <div class="card">
+                    <h2 class="card-title">About Us</h2>
+                    <p class="card-text">私たちの使命とビジョンについて学びましょう。</p>
                 </div>
-                <div style="padding: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); background-color: white;">
-                    <h2 class="font-crimson-text" style="margin-bottom: 16px;">Our Services</h2>
-                    <p style="font-size: 0.875rem;">革新的なサービスで企業のSDGs達成を支援。</p>
+                <div class="card">
+                    <h2 class="card-title">Our Services</h2>
+                    <p class="card-text">革新的なソリューションでビジネスの持続可能性を支援します。</p>
                 </div>
-                <div style="padding: 20px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); background-color: white;">
-                    <h2 class="font-crimson-text" style="margin-bottom: 16px;">Commitment</h2>
-                    <p style="font-size: 0.875rem;">持続可能な開発目標への強いコミットメント。</p>
+                <div class="card">
+                    <h2 class="card-title">Commitment</h2>
+                    <p class="card-text">SDGsへのコミットメントを強化するための戦略。</p>
                 </div>
             </div>
+        </section>
+        <section class="section news" id="news">
+            <div class="container">
+                <h2 class="section-title">Latest News</h2>
+                <ul class="news-list">
+                    <li class="news-item"><a href="#">活動準備中です。</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-text">質問がある場合や、私たちの取り組みについて詳しく知りたい場合は、お気軽にお問い合わせください。</p>
+                <a class="btn contact-btn" href="">準備中</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 株式会社ft_s2b. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
+

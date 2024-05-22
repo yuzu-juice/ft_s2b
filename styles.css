@@ -3,7 +3,7 @@ body {
 }
 
 .hero {
-    background-image: url('./images/image.png');
+    background-image: url('./images/tree.png');
     background-size: cover;
     background-position: center;
     color: white;

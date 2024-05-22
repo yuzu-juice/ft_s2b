@@ -3,7 +3,7 @@ body {
 }
 
 .hero {
-    background-image: url('./images/tree.png');
+    background-image: url('./images/red_purple.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -39,15 +39,15 @@ body {
     border-top: 1px solid #444;
 }
 
-.product-card {
+.product-card, .crowdfunding-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card:hover {
+.product-card:hover, .crowdfunding-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.product-card:hover .card-title {
+.product-card:hover .card-title, .crowdfunding-card:hover .card-title {
     color: green;
 }

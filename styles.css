@@ -1,110 +1,52 @@
-/* Reset styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif; /* 全体のフォント */
-}
-
 body {
-    background-color: #f4f4f4; /* 背景色 */
+    font-family: Arial, sans-serif;
 }
 
-/* Header styles */
-.header {
-    background-color: #005a8d; /* ヘッダーの背景色を濃い青色に設定 */
+.hero {
+    background-image: url('./images/image.png');
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 20px 0;
+    padding: 200px 0;
+    position: relative;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.image-section {
     text-align: center;
 }
 
-.header-title {
-    font-size: 24px;
-}
-
-/* Navbar styles */
-.navbar {
-    background-color: #005a8d; /* ナビゲーションバーの背景色 */
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* リンクを中央に配置 */
-}
-
-.nav-item {
-    margin: 0 20px; /* 各ナビゲーションアイテムの間隔 */
-}
-
-.nav-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 15px; /* リンクのパディングを追加 */
-    border-radius: 5px; /* リンクの角を丸くする */
-    transition: background-color 0.3s, color 0.3s; /* 色と背景色の変更にトランジションを追加 */
-}
-
-.nav-item a:hover, .nav-item a.active {
-    background-color: #f9d276; /* ホバー時とアクティブなリンクの背景色を変更 */
-    color: #005a8d; /* ホバー時とアクティブなリンクのテキスト色を変更 */
-}
-
-/* Main styles */
-.main {
-    padding: 20px 0;
-}
-
-/* Section styles */
-.section {
-    margin-bottom: 20px;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #005a8d; /* セクションタイトルの色 */
-}
-
-.section-text {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Grid styles */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-/* Card styles */
-.card {
-    background-color: #fde4a2; /* カードの背景色を明るい黄土色に設定 */
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.image-section img {
+    max-width: 100%;
+    height: auto;
 }
 
 .card-title {
     font-size: 18px;
-    margin-bottom: 5px;
-    color: #005a8d; /* カードタイトルの色 */
+    margin: 10px 0;
 }
 
 .card-text {
-    font-size: 14px;
-    color: #333;
+    font-size: 16px;
 }
 
+.footer-bottom {
+    border-top: 1px solid #444;
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover .card-title {
+    color: green;
+}

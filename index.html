@@ -1,81 +1,153 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>株式会社FT_S2B</title>
+    <title>FT_S2B</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navLinks = document.querySelectorAll('.nav-links a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-    });
-</script>
-
 <body>
-    <header class="header">
-        <h1 class="header-title">株式会社FT_S2B</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li class="nav-item"><a href="#intro">Home</a></li>
-                <li class="nav-item"><a href="#services">Services</a></li>
-                <li class="nav-item"><a href="#news">News</a></li>
-                <li class="nav-item"><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">FT_S2B</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">ホーム</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">私たちについて</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#products">製品</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-outline-dark" href="#contact">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main class="main">
-        <section class="section intro" id="intro">
-            <div class="container">
-                <h2 class="section-title">Sustainable Development Goals</h2>
-                <p class="section-text">持続可能な開発目標（SDGs）をビジネスに統合し、社会と環境にポジティブな影響を与えるための取り組みを推進しています。</p>
-            </div>
-        </section>
-        <section class="section services" id="services">
-            <div class="container grid">
-                <div class="card">
-                    <h2 class="card-title">About Us</h2>
-                    <p class="card-text">私たちの使命とビジョンについて学びましょう。</p>
-                </div>
-                <div class="card">
-                    <h2 class="card-title">Our Services</h2>
-                    <p class="card-text">革新的なソリューションでビジネスの持続可能性を支援します。</p>
-                </div>
-                <div class="card">
-                    <h2 class="card-title">Commitment</h2>
-                    <p class="card-text">SDGsへのコミットメントを強化するための戦略。</p>
-                </div>
-            </div>
-        </section>
-        <section class="section news" id="news">
-            <div class="container">
-                <h2 class="section-title">Latest News</h2>
-                <ul class="news-list">
-                    <li class="news-item"><a href="#">活動準備中です。</a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="section contact" id="contact">
-            <div class="container">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-text">質問がある場合や、私たちの取り組みについて詳しく知りたい場合は、お気軽にお問い合わせください。</p>
-                <a class="btn contact-btn" href="">準備中</a>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
+    <section class="hero" id="home">
+        <div class="container text-left text-white">
+            <h1 class="display-4">FT_S2B</h1>
+            <p class="lead">持続可能な開発目標（SDGs）をビジネスに統合し、社会的および環境的な影響を高めるための取り組みを推進します。</p>
+            <a href="#products" class="btn btn-success btn-lg">製品を見る</a>
+        </div>
+    </section>
+    <section class="about py-5" id="about">
         <div class="container">
-            <p class="footer-text">© 2024 株式会社FT_S2B. All rights reserved.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="text-success">持続可能な開発目標の統合</h2>
+                    <h3>東京における社会および環境への積極的な影響を促進する取り組み</h3>
+                    <p>私たちは、持続可能な開発目標（SDGs）をビジネスに統合し、東京における社会および環境への積極的な影響を促進します。</p>
+                    <a href="#contact" class="btn btn-link">お問い合わせ</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="path/to/your/image.jpg" class="img-fluid" alt="東京での作業">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products py-5 bg-light" id="products">
+        <div class="container text-center">
+            <h2 class="text-success">私たちの提供</h2>
+            <h3>革新的なソリューションを発見する</h3>
+            <p>お客様のニーズに応じた革新的なソリューションを探索してください。</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image1.jpg" class="card-img-top" alt="エコフレンドリーな再利用可能バッグ">
+                        <div class="card-body">
+                            <h4 class="card-title">エコフレンドリーな再利用可能バッグ</h4>
+                            <p class="card-text">持続可能なバッグでプラスチック廃棄物を減らしましょう</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image2.jpg" class="card-img-top" alt="太陽光発電LEDライト">
+                        <div class="card-body">
+                            <h4 class="card-title">太陽光発電LEDライト</h4>
+                            <p class="card-text">太陽エネルギーで空間を照らしましょう</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image3.jpg" class="card-img-top" alt="オーガニックコットン衣料">
+                        <div class="card-body">
+                            <h4 class="card-title">オーガニックコットン衣料</h4>
+                            <p class="card-text">オーガニックコットンで持続可能なファッションを楽しみましょう</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image4.jpg" class="card-img-top" alt="竹製キッチン用具セット">
+                        <div class="card-body">
+                            <h4 class="card-title">竹製キッチン用具セット</h4>
+                            <p class="card-text">エコフレンドリーで持続可能なキッチンツール</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image5.jpg" class="card-img-top" alt="リサイクルガラス飲料容器">
+                        <div class="card-body">
+                            <h4 class="card-title">リサイクルガラス飲料容器</h4>
+                            <p class="card-text">リサイクルガラスから美しく作られた飲料容器</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm product-card">
+                        <img src="path/to/your/image6.jpg" class="card-img-top" alt="生分解性携帯電話ケース">
+                        <div class="card-body">
+                            <h4 class="card-title">生分解性携帯電話ケース</h4>
+                            <p class="card-text">携帯電話と地球を守りましょう</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>FT_S2Bについて</h3>
+                    <p>FT_S2Bは、持続可能なビジネスプラクティスを促進し、持続可能な開発目標（SDGs）を日常業務に統合して、より良い未来を目指しています。</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>クイックリンク</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">ホーム</a></li>
+                        <li><a href="#about" class="text-white">私たちについて</a></li>
+                        <li><a href="#products" class="text-white">製品</a></li>
+                        <li><a href="#contact" class="text-white">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>お問い合わせ</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="メールアドレス" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="メッセージ" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">送信</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+            <p>&copy; 2024 FT_S2B. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
-
 </html>
-

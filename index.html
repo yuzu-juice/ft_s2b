@@ -20,7 +20,7 @@
                         <li class="nav-item"><a class="nav-link" href="#home">ホーム</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">私たちについて</a></li>
                         <li class="nav-item"><a class="nav-link" href="#products">製品</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#footer">お問い合わせ</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,7 +29,7 @@
     <section class="hero" id="home">
         <div class="container text-left text-white">
             <h1 class="display-4">FT_S2B</h1>
-            <p class="lead">持続可能な開発目標（SDGs）をビジネスに統合し、社会的および環境的な影響を高めるための取り組みを推進します。</p>
+            <p class="lead">持続可能な開発目標（SDGs）をビジネスに取り入れ、社会的および環境的な影響を高める取り組みを推進します。</p>
             <a href="#products" class="btn btn-success btn-lg">製品を見る</a>
         </div>
     </section>
@@ -39,11 +39,11 @@
                 <div class="col-md-6">
                     <h2 class="text-success">持続可能な開発目標の統合</h2>
                     <h3>東京における社会および環境への積極的な影響を促進する取り組み</h3>
-                    <p>私たちは、持続可能な開発目標（SDGs）をビジネスに統合し、東京における社会および環境への積極的な影響を促進します。</p>
-                    <a href="#contact" class="btn btn-link">お問い合わせ</a>
+                    <p>私たちは、持続可能な開発目標（SDGs）をビジネスに統合し、東京での社会および環境への積極的な影響を促進します。</p>
+                    <a href="#footer" class="btn btn-link">お問い合わせ</a>
                 </div>
                 <div class="col-md-6">
-                    <img src="./images/PC.avif" class="img-fluid" alt="PCでの作業">
+                    <img src="./images/PC.png" class="img-fluid" alt="PCでの作業">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="container text-center">
             <h2 class="text-success">私たちの提供</h2>
             <h3>革新的なソリューションを発見する</h3>
-            <p>お客様のニーズに応じた革新的なソリューションを探索してください。</p>
+            <p>お客様のニーズに応じた革新的なソリューションをご覧ください。</p>
             <div class="row">
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm product-card">
@@ -111,7 +111,7 @@
             </div>
         </div>
     </section>
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -124,7 +124,7 @@
                         <li><a href="#home" class="text-white">ホーム</a></li>
                         <li><a href="#about" class="text-white">私たちについて</a></li>
                         <li><a href="#products" class="text-white">製品</a></li>
-                        <li><a href="#contact" class="text-white">お問い合わせ</a></li>
+                        <li><a href="#footer" class="text-white">お問い合わせ</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -148,5 +148,17 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -8,24 +8,9 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="../index.html">FT_S2B</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html#home">ホーム</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#about">私たちについて</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#products">クラウドファンディング募集</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../index.html#footer">お問い合わせ</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- ヘッダプレースホルダー -->
+    <div id="header-placeholder"></div>
+
     <section class="hero" id="project1">
         <div class="container text-left text-white">
             <h1 class="display-4">プロジェクト1</h1>
@@ -54,42 +39,27 @@
             </div>
         </div>
     </section>
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>FT_S2Bについて</h3>
-                    <p>FT_S2Bは、持続可能なビジネスプラクティスを促進し、持続可能な開発目標（SDGs）を日常業務に統合して、より良い未来を目指しています。</p>
-                </div>
-                <div class="col-md-4">
-                    <h3>クイックリンク</h3>
-                    <ul class="list-unstyled">
-                        <li><a href="../index.html#home" class="text-white">ホーム</a></li>
-                        <li><a href="../index.html#about" class="text-white">私たちについて</a></li>
-                        <li><a href="../index.html#products" class="text-white">クラウドファンディング募集</a></li>
-                        <li><a href="../index.html#footer" class="text-white">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>お問い合わせ</h3>
-                    <form action="#">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="email" placeholder="メールアドレス" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="メッセージ" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">送信</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom text-center py-3">
-            <p>&copy; 2024 FT_S2B. All rights reserved.</p>
-        </div>
-    </footer>
+
+    <!-- フッタプレースホルダー -->
+    <div id="footer-placeholder"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // ヘッダとフッタを動的に読み込む関数
+        function loadComponent(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                });
+        }
+
+        // ページが読み込まれた後にヘッダとフッタを読み込む
+        document.addEventListener("DOMContentLoaded", function() {
+            loadComponent("header.html", "header-placeholder");
+            loadComponent("footer.html", "footer-placeholder");
+        });
+    </script>
 </body>
 </html>
